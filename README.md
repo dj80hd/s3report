@@ -17,39 +17,30 @@ And supports the following features:
 * Ability to filter buckets in and out of the results
 * Optional JSON output
 
-The solution is written in 3 languages: [golang](main.go), [Bash](s3report.sh) and [Ruby](s3report.rb).
-to model the best practices of each command line tool language.
-
-## Requirements
-* [go](https://golang.org/doc/install)
+In addition to [golang](main.go), s3report is ported to [Bash](bin/s3report.sh) and [Ruby](bin/s3report.rb).
 
 ## Installation
 ```
-make && cp s3report /usr/local/bin
+make && bin/s3reort --help
 ```
 ## Usage
 
 ```
 Usage of ./s3report:
-  -count int
+  --count int
     	Number objects to show for each bucket. 5 means five newest, -5 means five oldest. (default -5)
-  -exclude string
+  --exclude string
     	exclude buckets whose name includes this string. Default is include all buckets.
-  -include string
+  --include string
     	only include buckets whose name includes this string. (default is include all buckets)
-  -json
+  --json
     	json output
-  -timeout int
+  --timeout int
     	Number of seconds to wait for all analysis to complete. (default 600)
 
 ```
 
 ## Usage Examples
-
-Get help:
-```
-s3report --help
-```
 
 Report on all buckets whose name includes 'foo'
 

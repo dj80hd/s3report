@@ -1,5 +1,3 @@
 cov.out
+bin/s3report
 *.json
-s3report
-main
-*~
