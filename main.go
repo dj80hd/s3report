@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"os"
 	"time"
-
-	"github.com/dj80hd/s3report/bucket"
 )
 
 func fail(msg string) {
@@ -33,7 +31,7 @@ func main() {
 	flag.Parse()
 
 	//Get list of buckets filtered by user options.
-	buckets, err := bucket.GetBuckets(*include, *exclude)
+	buckets, err := GetBuckets(*include, *exclude)
 	if err != nil {
 		fail("Could not get buckets: " + err.Error())
 	}
@@ -43,7 +41,7 @@ func main() {
 	}
 
 	//Calculate analysis of each bucket in parallel
-	ch := make(chan *bucket.Analysis, 10)
+	ch := make(chan *Analysis, 10)
 	for _, b := range buckets {
 		go b.Analyze(ch, *displayObjectCount)
 	}

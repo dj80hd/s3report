@@ -1,4 +1,4 @@
-package bucket
+package main
 
 import (
 	"encoding/json"
