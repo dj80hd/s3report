@@ -21,7 +21,7 @@ In addition to [golang](main.go), s3report is ported to [Bash](bin/s3report.sh) 
 
 ## Installation
 ```
-make && bin/s3reort --help
+make && bin/s3report --help
 ```
 ## Usage
 
