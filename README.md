@@ -30,7 +30,7 @@ Usage of ./s3report:
   --count int
     	Number objects to show for each bucket. 5 means five newest, -5 means five oldest. (default -5)
   --exclude string
-    	exclude buckets whose name includes this string. Default is include all buckets.
+    	exclude buckets whose name includes this string. (default is include all buckets)
   --include string
     	only include buckets whose name includes this string. (default is include all buckets)
   --json
