@@ -8,7 +8,7 @@ import (
 )
 
 func fail(msg string) {
-	fmt.Fprintf(os.Stderr, msg)
+	fmt.Fprintf(os.Stderr, "%s", msg)
 	os.Exit(1)
 }
 

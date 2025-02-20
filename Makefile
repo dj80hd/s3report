@@ -6,5 +6,5 @@ test: build
 build:
 	go fmt ./...
 	go vet `go list ./...`
-	golint ./...
+	golangci-lint run
 	go build -o bin/s3report
